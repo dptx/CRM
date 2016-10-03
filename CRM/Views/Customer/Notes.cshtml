@@ -1,0 +1,65 @@
+﻿@model CRM.Models.CustomerNotesViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Customer Details</h2>
+<button class="btn btn-default" data-toggle="modal" data-target="#noteModal">Add Note</button>
+
+@using (Html.BeginForm("Update", "Customer", FormMethod.Post, new { id = "updateCustomerForm", @class = "form-horizontal", role = "form" }))
+{
+    Html.RenderPartial("_CustomerForm", Model.Customer);
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Update" />
+            <label class="lblUpdated" hidden="hidden">Customer Updated</label>
+            <label class="lblFailed" hidden="hidden">Updated Failed</label>
+        </div>
+    </div>
+ }
+
+<br /><br />
+
+<table id="tblNoteList" class="table table-striped">
+    <tr>
+        <th>
+            Note Author
+        </th>
+        <th>
+            Note
+        </th>
+        <th>
+            Date Added
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var note in Model.Notes)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(n => note.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(n => note.Body)
+            </td>
+            <td>
+                @Html.DisplayFor(n => note.Created)
+            </td>
+            <td>
+            </td>
+        </tr>
+    }
+
+</table>
+
+@{ Html.RenderPartial("_NoteModal", new CRM.Models.NoteModel() { CustomerID = Model.Customer.CustomerID }); }
+
+@section Scripts {
+
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/custDetails")
+
+}

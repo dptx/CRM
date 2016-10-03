@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM", "CRM\CRM.csproj", "{A44EB6F9-5FEF-46A6-B28C-513F73D35F24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.DataAccess", "CRM.DataAccess\CRM.DataAccess.csproj", "{1056EE13-298A-40F4-82C5-9C334DBA1595}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Test", "CRM.Test\CRM.Test.csproj", "{C664C864-93B4-4BC1-A91D-835240A558F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A44EB6F9-5FEF-46A6-B28C-513F73D35F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A44EB6F9-5FEF-46A6-B28C-513F73D35F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A44EB6F9-5FEF-46A6-B28C-513F73D35F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A44EB6F9-5FEF-46A6-B28C-513F73D35F24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1056EE13-298A-40F4-82C5-9C334DBA1595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1056EE13-298A-40F4-82C5-9C334DBA1595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1056EE13-298A-40F4-82C5-9C334DBA1595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1056EE13-298A-40F4-82C5-9C334DBA1595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C664C864-93B4-4BC1-A91D-835240A558F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C664C864-93B4-4BC1-A91D-835240A558F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C664C864-93B4-4BC1-A91D-835240A558F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C664C864-93B4-4BC1-A91D-835240A558F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

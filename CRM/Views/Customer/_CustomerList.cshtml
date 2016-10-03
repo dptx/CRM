@@ -1,0 +1,37 @@
+﻿@model List<CRM.Models.CustomerModel>
+
+<table class="table table-striped" id="tblCustomerList">
+    <tr>
+        <th>
+            Last Name
+        </th>
+        <th>
+            First Name
+        </th>
+        <th>
+            Company
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(c => customer.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(c => customer.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(c => customer.Company)
+            </td>
+            <td>
+                <button class="btn btn-default addNote" value="@customer.CustomerID" data-toggle="modal" data-target="#noteModal">Add Note</button>
+                <a href="/Customer/Notes/?id=@customer.CustomerID" class="btn btn-default">Details</a>
+                @Html.Hidden("CustomerName" + customer.CustomerID, customer.FirstName + " " + customer.LastName)
+            </td>
+        </tr>
+    }
+
+</table>
