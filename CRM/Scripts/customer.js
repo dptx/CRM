@@ -69,7 +69,8 @@ function SaveCustomer(form) {
 function AddTableRow(customer) {
     var row = "<tr><td>" + customer.LastName + "</td><td>" + customer.FirstName + "</td><td>" + customer.Company + "</td><td>" +
         "<button class='btn btn-default addNote' value='" + customer.CustomerID + "'data-toggle='modal' data-target='#noteModal'>Add Note</button> " +
-        "<a href='/Customer/Notes/?id=" + customer.CustomerID + "' class='btn btn-default'>Details</a>" + "</td></tr>";
+        "<a href='/Customer/Notes/?id=" + customer.CustomerID + "' class='btn btn-default'>Details</a>" + "</td></tr>" +
+        "<input id='CustomerName" + customer.CustomerID + "' name='CustomerName" + customer.CustomerID + "' type='hidden' value='" + customer.FirstName + " " + customer.LastName + "'>";
 
     $('#tblCustomerList tr:last').after(row);
 }
